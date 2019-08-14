@@ -1,0 +1,41 @@
+.visible {
+    display: inline-block;
+}
+.hide {
+    display: none;
+}
+@include respond("<small") {
+     .visible-xs {
+        display: inline-block;
+     }
+     .hide-xs {
+        display: none;
+     }
+}
+
+@include respond("<medium") {
+    .visible-sm {
+        display: inline-block;
+    }
+    .hide-sm {
+        display: none;
+    }
+}
+
+@include respond("<large") {
+    .visible-md {
+        display: inline-block;
+    }
+    .hide-md {
+        display: none;
+    }
+}
+
+@include respond(">large") {
+    .visible-lg {
+        display: inline-block;
+    }
+    .hide-lg {
+        display: none;
+    }
+}

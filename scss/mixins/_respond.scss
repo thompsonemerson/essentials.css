@@ -1,0 +1,23 @@
+
+
+@mixin respond($breakpoint) {
+
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+
+	@if str-slice($breakpoint, 0, 1) == ">" and map-has-key($breakpoints, str-slice($breakpoint, 2, -1)) {
+		@media (min-width: #{map-get($breakpoints, str-slice($breakpoint, 2, -1))}) {
+			@content;
+		}
+	}
+
+	@if str-slice($breakpoint, 0, 1) == "<" and map-has-key($breakpoints, str-slice($breakpoint, 2, -1)) {
+		@media (max-width: #{map-get($breakpoints, str-slice($breakpoint, 2, -1))}) {
+			@content;
+		}
+	}
+
+}

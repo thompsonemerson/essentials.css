@@ -2,21 +2,53 @@
 	<img src="essentials.png" alt="Essentials.css" width=100 height=100>
 </p>
 
-<br>
+
+[![npm](https://img.shields.io/npm/v/essentials.css.svg)](https://www.npmjs.com/package/essentials.css)
+[![GitHub license](https://img.shields.io/github/license/svichas/essentials.css.svg)](https://github.com/svichas/essentials.css/blob/master/LICENSE)
+
+
+## Why essentials.css
+Essentials.css is a small CSS framework and provides all the essentials styles you need for a website. Includes Normalize.css for rendering all elements more consistently and in line with modern standards.
 
 ## Installation
 
-<ul>
-	<li>Close repository: <code>git clone https://github.com/svichas/essentials.css.git</code></li>
-	<li>NPM install: <code>npm install essentials.css</code></li>
-	<li>Download latest release: <a href="https://github.com/svichas/essentials.css/releases/tag/1.0.0">v1.0.0</a></li>
-	<li>Use CDN: https://cdn.rawgit.com/svichas/essentials.css/34b02732/dist/essentials.min.css</li>
-</ul>
+**Install with bower**
+
+```sh
+$ bower install essentials.css
+```
+
+**Install with npm**
+
+```sh
+$ npm install essentials.css
+```
+
+
+**Install with CDN**
 
 ```html
-<!-- Open-sans font optional -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/svichas/essentials.css/34b02732/dist/essentials.min.css">
+https://unpkg.com/essentials.css@2.5.0/dist/essentials.min.css
+```
+
+**Download latest release**
+
+<a href="https://github.com/svichas/essentials.css/releases">here</a>
+
+**Clone repository**
+
+```sh
+$ git clone https://github.com/svichas/essentials.css.git
+```
+
+
+## Usage
+
+<p>Copy-paste the stylesheet &#x3C;link&#x3E; into your &#x3C;head&#x3E; before all other stylesheets to load our CSS.</p>
+
+```html
+<!-- Essentials.css framework -->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/essentials.css@2.5.0/dist/essentials.min.css">
 ```
 
 
@@ -25,8 +57,11 @@
 <a href="https://svichas.github.io/essentials.css/">svichas.github.io/essentials.css</a>
 
 
-## Disclaimer
+## Contributing
 
-<p>
-	essentials.css by default includes Normalize.css (under MIT licence) created by Mark Otto and Jacob Thornton.
-</p>
+<a href="contributing.md">Click here to see Contributing guidelines.</a>
+
+
+## License
+
+<p>Created by <a href="https://github.com/svichas">Stefanos Vichas</a>. Licensed under the MIT License.</p>

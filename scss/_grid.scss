@@ -1,0 +1,92 @@
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: $containerPadding;
+    padding-right: $containerPadding;
+    width: 100%;
+}
+
+.row {
+    @include gridRow();
+}
+
+.col {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+// grid columns
+@for $i from 1 through $gridColums {
+    .col-#{$i} {
+        @include gridWidth(($i/$gridColums)*100%);
+    }
+}
+
+// grid offsets
+@for $i from 0 through $gridColums - 1 {
+    .offset-#{$i} {
+       margin-left: ($i/$gridColums)*100%;
+    }
+}
+
+
+// respinsive grid
+// greater than zero
+@for $i from 1 through $gridColums {
+    .col-xs-#{$i} {
+        @include gridWidth(($i/$gridColums)*100%);
+    }
+}
+@for $i from 0 through $gridColums - 1 {
+    .offset-xs-#{$i} {
+       margin-left: ($i/$gridColums)*100%;
+    }
+}
+
+
+// respinsive grid
+@include respond(">small") {
+    @for $i from 1 through $gridColums {
+        .col-sm-#{$i} {
+            @include gridWidth(($i/$gridColums)*100%);
+        }
+    }
+    @for $i from 0 through $gridColums - 1 {
+        .offset-sm-#{$i} {
+           margin-left: ($i/$gridColums)*100%;
+        }
+    }
+}
+
+
+// respinsive grid
+@include respond(">medium") {
+    @for $i from 1 through $gridColums {
+        .col-md-#{$i} {
+            @include gridWidth(($i/$gridColums)*100%);
+        }
+    }
+    @for $i from 0 through $gridColums - 1 {
+        .offset-md-#{$i} {
+           margin-left: ($i/$gridColums)*100%;
+        }
+    }
+}
+
+
+// respinsive grid
+@include respond(">large") {
+    @for $i from 1 through $gridColums {
+        .col-lg-#{$i} {
+            @include gridWidth(($i/$gridColums)*100%);
+        }
+    }
+    @for $i from 0 through $gridColums - 1 {
+        .offset-lg-#{$i} {
+           margin-left: ($i/$gridColums)*100%;
+        }
+    }
+}

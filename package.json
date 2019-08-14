@@ -1,8 +1,8 @@
 {
   "name": "essentials.css",
-  "version": "1.0.0",
+  "version": "2.5.0",
   "description": "Light weight front-end framework",
-  "main": "dist/essentials.css\u001b[A\u001b[B\u001b[D\u001b[D\u001b[D\u001b[D.min.css",
+  "main": "dist/essentials.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +11,9 @@
     "url": "git+https://github.com/svichas/essentials.css.git"
   },
   "keywords": [
-    "css-frameword",
-    "css"
+    "css-framework",
+    "css",
+    "essentials.css"
   ],
   "author": "svichas",
   "license": "MIT",
@@ -23,7 +24,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
-  },
-  "dependencies": {}
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "^5.0.0"
+  }
 }

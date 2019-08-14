@@ -1,0 +1,73 @@
+label,
+legend {
+     display: block;
+     font-size: 1.3rem;
+     font-weight: 700;
+}
+
+.form {
+     label {
+          font-size: 16px;
+          font-weight: normal;
+          margin-bottom: 3px;
+     }
+
+     width: 100%;
+
+     &.sm {
+          max-width: 320px;
+     }
+
+     &.md {
+          max-width: 720px;
+     }
+
+     &.lg {
+          max-width: 920px;
+     }
+}
+
+.form-group {
+     display: flex;
+     margin: 0 -10px;
+
+     .form-control {
+          flex: 1;
+          margin: 0 10px;
+     }
+
+     .form-input {
+          width: 100%;
+     }
+
+     + .form-group {
+          margin-top: 10px;
+     }
+}
+
+.form-input {
+    margin: 0;
+    appearance: none;
+    font-size: 1rem;
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray;
+    padding: .5rem .7rem;
+    color: $black;
+    outline: 0;
+    border-radius: .2rem;
+    transition: border 200ms ease, box-shadow 200ms ease;
+    &:hover {
+        border-color: $silver;
+    }
+    &:focus {
+        box-shadow: 0px 0px .3rem $blue;
+        border-color: $blue;
+    }
+
+    &[disabled] {
+         background-color: hex_opacity($gray, .3);
+         border-color: $gray;
+    }
+}

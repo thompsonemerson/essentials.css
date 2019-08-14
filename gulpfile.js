@@ -1,28 +1,49 @@
+/*!
+* Essentials.css framework
+* version 2.5.0
+* https://github.com/svichas/essentials.css
+*/
 
-// require gul, gulp-sass and gulp-rename
-
-const gulp   = require("gulp");
-const sass   = require("gulp-sass");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
 const rename = require("gulp-rename");
+const autoprefixer = require("gulp-autoprefixer");
 
 //creating compile task
-gulp.task("compile-sass", function() {
+gulp.task("compile-sass", () => {
+
 	//compile sass compressed version
-	gulp.src("src/*.sass")
-	.pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+	gulp.src("scss/*.scss")
+	.pipe(sass({
+		outputStyle: "compressed",
+		errLogToConsole: true
+	}).on("error", sass.logError))
+	.pipe(autoprefixer({
+		browsers: ['last 3 versions'],
+		cascade: false
+  	}))
 	.pipe(rename("essentials.min.css"))
 	.pipe(gulp.dest("dist/"));
 
 	//compile sass uncompressed version
-	gulp.src("src/*.sass")
-	.pipe(sass().on("error", sass.logError))
+	gulp.src("scss/*.scss")
+	.pipe(sass({
+		errLogToConsole: true
+	}).on("error", sass.logError))
+	.pipe(autoprefixer({
+		browsers: ['last 3 versions'],
+		cascade: false
+    	}))
 	.pipe(rename("essentials.css"))
 	.pipe(gulp.dest("dist/"));
 
 });
 
 // creating watch task
-gulp.task("sass-watch", function() {
+gulp.task("compile", () => {
+
 	//watching sass files on src directory
-	gulp.watch("src/*.sass", ["compile-sass"]);
+	gulp.watch("scss/*.scss", ["compile-sass"]);
+	gulp.watch("scss/**/*.scss", ["compile-sass"]);
+
 });
